@@ -70,8 +70,9 @@
         color: black;
         text-align: center;
         padding: 20px;
+        position: relative;
+        width: 100%;
         height: 100vh;
-        width: 500px;
         background-size: cover;
         background-position: center;
       }
@@ -87,6 +88,12 @@
       #play {
         background-color: lightgreen;
       }
+
+      #blueAlliance{
+        position: relative;
+      }
+
+
     </style>
   </head>
   <body>
@@ -101,6 +108,10 @@
 
     <div id="sub">
       <button id="back-btn1">Go Back</button>
+      <div id = "blueAlliance">
+        <img src = "file:///C:/Users/abennett747/Downloads/FRC%20Rebuilt%20Scouting%20App%20Background%20Subjective%20or%20Objective%20Blue.png">
+      </div>
+      
     </div>
 
     <div id="obj">
@@ -116,7 +127,6 @@
         document.getElementById('Subjective').addEventListener('click', function() {
           document.getElementById('main-screen').style.display = 'none'; 
           document.getElementById('sub').style.display = 'block';
-          document.getElementById('sub').style.backgroundImage = 'url(file:///C:/Users/abennett747/Downloads/FRC%20Rebuilt%20Scouting%20App%20Background%20Subjective%20or%20Objective%20Blue.png)';
         });
 
 
