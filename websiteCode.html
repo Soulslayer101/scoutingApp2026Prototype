@@ -91,15 +91,42 @@
 
       #blueAlliance{
         position: relative;
+        right:20px;
+        width:500px;
+        height:100vh;
       }
 
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 190px;
+        display: flex;
+        background-color: black;
+        color: white;
+        height: 100px;
+        width:200px;
+        font-family: 'Poppins', sans-serif;
+        z-index: 10;
+        border-radius: 10px;
+      }
 
+      nav h2 {
+        margin: 0;
+        padding: 0 10px;
+      }
+
+      nav h2:hover, nav h2:focus {
+        color: #ffcc00; /* Hover effect */
+      }
     </style>
   </head>
   <body>
     <div id="main-screen">
       <div id="title">
-        <h2>135 in 2026</h2>
+        <nav>
+          <h2>135 in 2026</h2>
+        </nav>
       </div>
       <button id="Subjective">SUBJECTIVE</button>
       <button id="Objective">OBJECTIVE</button>
@@ -111,7 +138,6 @@
       <div id = "blueAlliance">
         <img src = "file:///C:/Users/abennett747/Downloads/FRC%20Rebuilt%20Scouting%20App%20Background%20Subjective%20or%20Objective%20Blue.png">
       </div>
-      
     </div>
 
     <div id="obj">
@@ -129,31 +155,26 @@
           document.getElementById('sub').style.display = 'block';
         });
 
-
         document.getElementById('Objective').addEventListener('click', function() {
           document.getElementById('main-screen').style.display = 'none'; 
           document.getElementById('obj').style.display = 'block';
         });
-
 
         document.getElementById('play-off').addEventListener('click', function() {
           document.getElementById('main-screen').style.display = 'none'; 
           document.getElementById('play').style.display = 'block';
         });
 
-      
         document.getElementById('back-btn1').addEventListener('click', function() {
           document.getElementById('sub').style.display = 'none';
           document.getElementById('main-screen').style.display = 'flex'; 
         });
 
-  
         document.getElementById('back-btn2').addEventListener('click', function() {
           document.getElementById('obj').style.display = 'none'; 
           document.getElementById('main-screen').style.display = 'flex'; 
         });
 
-      
         document.getElementById('back-btn3').addEventListener('click', function() {
           document.getElementById('play').style.display = 'none'; 
           document.getElementById('main-screen').style.display = 'flex'; 
