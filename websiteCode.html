@@ -61,12 +61,12 @@
         color: black;
       }
 
-      #sub {
+      #sub, #obj, #play {
         background-color: yellow;
         color: black;
         text-align: center;
         padding: 20px;
-        display: none; 
+        visibility: hidden; /* Initially hidden */
       }
 
     </style>
@@ -82,45 +82,59 @@
     </div>
 
     <div id="sub">
-      <h2>Hello</h2>
+      <button id="back-btn1">Go Back</button>
     </div>
 
-    <div id = "obj">
-        <h2>j</h2>
+    <div id="obj">
+      <h2>Objective Section</h2>
+      <button id="back-btn2">Go Back</button>
     </div>
 
-    <div id = "play">
-        <h2>h</h2>
+    <div id="play">
+      <h2>Play Off Section</h2>
+      <button id="back-btn3">Go Back</button>
     </div>
 
     <script>
- 
       document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('Subjective').addEventListener('click', function() {
-          document.getElementById('main-screen').style.display = 'none';
-          document.getElementById('sub').style.display = 'block';
+          document.getElementById('main-screen').style.visibility = 'hidden'; 
+          document.getElementById('sub').style.visibility = 'visible'; 
         });
-      });
 
-      document.addEventListener('DOMContentLoaded', function() {
+        
         document.getElementById('Objective').addEventListener('click', function() {
-          document.getElementById('main-screen').style.display = 'none';
-          document.getElementById('obj').style.display = 'block';
+          document.getElementById('main-screen').style.visibility = 'hidden'; 
+          document.getElementById('obj').style.visibility = 'visible'; 
         });
-      });
 
-
-      document.addEventListener('DOMContentLoaded', function() {
+        
         document.getElementById('play-off').addEventListener('click', function() {
-          document.getElementById('main-screen').style.display = 'none';
-          document.getElementById('play').style.display = 'block';
+          document.getElementById('main-screen').style.visibility = 'hidden'; 
+          document.getElementById('play').style.visibility = 'visible';
+        });
+
+        
+        document.getElementById('back-btn1').addEventListener('click', function() {
+          document.getElementById('sub').style.visibility = 'hidden';
+          document.getElementById('main-screen').style.visibility = 'visible'; 
+        });
+
+        
+        document.getElementById('back-btn2').addEventListener('click', function() {
+          document.getElementById('obj').style.visibility = 'hidden'; 
+          document.getElementById('main-screen').style.visibility = 'visible'; 
+        });
+
+        
+        document.getElementById('back-btn3').addEventListener('click', function() {
+          document.getElementById('play').style.visibility = 'hidden'; 
+          document.getElementById('main-screen').style.visibility = 'visible'; 
         });
       });
-
-
+      
     </script>
   </body>
 </html>
-
 
 
