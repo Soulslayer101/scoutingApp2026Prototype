@@ -15,7 +15,7 @@
         display: flex;
         flex-direction: column;
         background-color: yellow;
-        border-radius: 20px;
+        border-radius: 15px;
         text-align: center;
         position: relative;
         width: 70%;
@@ -61,10 +61,6 @@
         color: black;
       }
 
-      .hidden {
-        display: none;
-      }
-
       #sub {
         background-color: yellow;
         color: black;
@@ -85,16 +81,43 @@
       <button id="play-off">PLAY OFF</button>
     </div>
 
-    <!-- Hidden content initially -->
-    <div id="sub" class="hidden">
+    <div id="sub">
       <h2>Hello</h2>
     </div>
 
+    <div id = "obj">
+        <h2>j</h2>
+    </div>
+
+    <div id = "play">
+        <h2>h</h2>
+    </div>
+
     <script>
-      document.getElementById('Subjective').addEventListener('click', () => {
-        document.getElementById('main-screen').classList.add('hidden');
-        document.getElementById('sub').classList.remove('hidden');
+ 
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('Subjective').addEventListener('click', function() {
+          document.getElementById('main-screen').style.display = 'none';
+          document.getElementById('sub').style.display = 'block';
+        });
       });
+
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('Objective').addEventListener('click', function() {
+          document.getElementById('main-screen').style.display = 'none';
+          document.getElementById('obj').style.display = 'block';
+        });
+      });
+
+
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('play-off').addEventListener('click', function() {
+          document.getElementById('main-screen').style.display = 'none';
+          document.getElementById('play').style.display = 'block';
+        });
+      });
+
+
     </script>
   </body>
 </html>
