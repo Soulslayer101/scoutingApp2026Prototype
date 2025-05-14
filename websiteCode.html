@@ -65,7 +65,7 @@
         display: none; /* Hide sections by default */
       }
 
-      #sub {
+      #sub, #obj, #play {
         background-color: yellow;
         color: black;
         text-align: center;
@@ -76,26 +76,16 @@
         background-position: center;
       }
 
+      #sub {
+        background-color: yellow;
+      }
+
       #obj {
         background-color: lightblue;
-        color: black;
-        text-align: center;
-        padding: 20px;
-        height: 100vh;
-        width: 500px;
-        background-size: cover;
-        background-position: center;
       }
 
       #play {
         background-color: lightgreen;
-        color: black;
-        text-align: center;
-        padding: 20px;
-        height: 100vh;
-        width: 500px;
-        background-size: cover;
-        background-position: center;
       }
     </style>
   </head>
@@ -123,47 +113,42 @@
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        // Show Subjective section
         document.getElementById('Subjective').addEventListener('click', function() {
           document.getElementById('main-screen').style.display = 'none'; 
           document.getElementById('sub').style.display = 'block';
-          // Set specific background for Subjective section
           document.getElementById('sub').style.backgroundImage = 'url(file:///C:/Users/abennett747/Downloads/FRC%20Rebuilt%20Scouting%20App%20Background%20Subjective%20or%20Objective%20Blue.png)';
         });
 
-        // Show Objective section
+
         document.getElementById('Objective').addEventListener('click', function() {
           document.getElementById('main-screen').style.display = 'none'; 
           document.getElementById('obj').style.display = 'block';
-          // Set specific background for Objective section
-          document.getElementById('obj').style.backgroundImage = 'url(file:///C:/Users/abennett747/Downloads/FRC%20Rebuilt%20Scouting%20App%20Background%20Subjective%20or%20Objective%20Red.png)';
         });
 
-        // Show Play Off section
+
         document.getElementById('play-off').addEventListener('click', function() {
           document.getElementById('main-screen').style.display = 'none'; 
           document.getElementById('play').style.display = 'block';
         });
 
-        // Go Back from Subjective Section
+      
         document.getElementById('back-btn1').addEventListener('click', function() {
           document.getElementById('sub').style.display = 'none';
-          document.getElementById('main-screen').style.display = 'block'; 
+          document.getElementById('main-screen').style.display = 'flex'; 
         });
 
-        // Go Back from Objective Section
+  
         document.getElementById('back-btn2').addEventListener('click', function() {
           document.getElementById('obj').style.display = 'none'; 
-          document.getElementById('main-screen').style.display = 'block'; 
+          document.getElementById('main-screen').style.display = 'flex'; 
         });
 
-        // Go Back from Play Off Section
+      
         document.getElementById('back-btn3').addEventListener('click', function() {
           document.getElementById('play').style.display = 'none'; 
-          document.getElementById('main-screen').style.display = 'block'; 
+          document.getElementById('main-screen').style.display = 'flex'; 
         });
       });
     </script>
   </body>
 </html>
-
