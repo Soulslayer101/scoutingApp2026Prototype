@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <style>
+      body {
+        background-color: black;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      #main-screen {
+        display: flex;
+        flex-direction: column;
+        background-color: yellow;
+        border-radius: 20px;
+        text-align: center;
+        position: relative;
+        width: 70%;
+        height: 100vh;
+        color: black;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        background-image: url('https://mail.google.com/mail/u/0?ui=2&ik=faf18d33fc&attid=0.1&permmsgid=msg-f:1832123355852781693&th=196d027c324d387d&view=att&disp=safe&realattid=f_maoaxbir0&zw');
+        background-size: cover;
+        background-position: center;
+        gap: 10vh;
+      }
+
+      button {
+        background-color: black;
+        height: 60px;
+        color: white;
+        border-radius: 15px;
+        cursor: pointer;
+        width: 70%;
+        font-size: 16px;
+        border: none;
+        transition: transform 0.2s ease, background-color 0.2s ease;
+        font-family: 'Times New Roman', Times, serif;
+        box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+        font-size: larger;
+      }
+
+      button:hover {
+        background-color: gray;
+        transform: translateY(-5px);
+      }
+
+      #title {
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 24px;
+        font-weight: bold;
+        color: black;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      #sub {
+        background-color: yellow;
+        color: black;
+        text-align: center;
+        padding: 20px;
+        display: none; 
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="main-screen">
+      <div id="title">
+        <h2>135 in2026</h2>
+      </div>
+      <button id="Subjective">SUBJECTIVE</button>
+      <button id="Objective">OBJECTIVE</button>
+      <button id="play-off">PLAY OFF</button>
+    </div>
+
+    <!-- Hidden content initially -->
+    <div id="sub" class="hidden">
+      <h2>Hello</h2>
+    </div>
+
+    <script>
+      document.getElementById('Subjective').addEventListener('click', () => {
+        document.getElementById('main-screen').classList.add('hidden');
+        document.getElementById('sub').classList.remove('hidden');
+      });
+    </script>
+  </body>
+</html>
+
+
+
