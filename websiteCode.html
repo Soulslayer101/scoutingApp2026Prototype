@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    <style>
-      body {
-        background-color: black;
-        margin: 0;
-        font-family: 'Poppins', sans-serif;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
 
-      #main-screen {
+    #main-screen {
         display: flex;
         flex-direction: column;
         background-color: yellow;
@@ -29,185 +30,112 @@
         background-size: cover;
         background-position: center;
         gap: 10vh;
-      }
-
-      button {
-        background-color: black;
-        height: 60px;
-        color: white;
-        border-radius: 15px;
-        cursor: pointer;
-        width: 70%;
-        font-size: 16px;
-        border: none;
-        transition: transform 0.2s ease, background-color 0.2s ease;
-        font-family: 'Times New Roman', Times, serif;
-        box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
-        font-size: larger;
-      }
-
-      button:hover {
-        background-color: gray;
-        transform: translateY(-5px);
-      }
-
-      #title {
-        position: absolute;
-        top: 40px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 24px;
-        font-weight: bold;
-        color: black;
-      }
-
-      #sub, #obj, #play {
-        display: none; /* Hide sections by default */
-      }
-
-      #sub, #obj, #play {
-        background-color: yellow;
-        color: black;
-        text-align: center;
-        padding: 20px;
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        background-size: cover;
-        background-position: center;
-      }
-
-      #sub {
-        background-color: yellow;
-      }
-
-      #obj {
-        background-color: lightblue;
-      }
-
-      #play {
-        background-color: lightgreen;
-      }
-
-      #blueAlliance{
-        position: relative;
-        right:20px;
-        width:500px;
-        height:100vh;
-      }
-
-      nav {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: flex;
-        background-color: black;
-        color: white;
-        height: 100px;
-        width: 200px;
-        font-family: 'Poppins', sans-serif;
-        z-index: 10;
-        border-radius: 10px;
     }
 
-      nav h2 {
-        margin: 0;
-        padding: 0 10px;
-        right:190px;
-      }
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-top: 0;
+      color: black;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
 
-      nav h2:hover, nav h2:focus {
-        color: #ffcc00; 
-      }
+    button {
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 10px;
+      background-color: #222;
+      color: white;
+      cursor: pointer;
+      width: 70%;
+      max-width: 400px;
+      transition: all 0.3s ease;
+    }
 
+    button:hover {
+      background-color: #444;
+      transform: translateY(-3px);
+    }
 
-      #back-btn3{
-        width:120px;
-        height:50px;
-        position: relative;
-      }
+    .screen {
+      display: none;
+      height: 100vh;
+      padding: 30px;
+      background-size: cover;
+      background-position: center;
+      box-sizing: border-box;
+    }
 
-      #algae {
-        background-color:green;
-        border-radius: 15px;
-        width:205px;
-        height:225px;
-        cursor: pointer;
-        position: relative;
-        right:700px;
-        top:200px;
-        color:white;
-        text-align: center;
-        font-size: larger;
-       
+    .active {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-      }
+    .back-btn {
+      margin-bottom: 20px;
+      background-color: crimson;
+    }
 
+    #play .coral-buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+    }
 
-      #l1Coral  {
-        background-color:white;
-        border-radius: 15px;
-        width:205px;
-        height:225px;
-        cursor: pointer;
-        position: relative;
-        right:550px;
-        top:200px;
-        color:black;
-        text-align: center;
-        font-size: larger;
-      }
+    .coral-buttons button {
+      width: 200px;
+      height: 200px;
+      font-size: 1rem;
+      color: black;
+    }
 
+    #algae { background-color: lightgreen; }
+    #l1Coral { background-color: white; }
+    #l2Coral { background-color: teal; }
+    #l3Coral { background-color: orange; }
+    #l4Coral{background-color: pink;}
+    #NetScore{background-color:gray;}
 
-      #l2Coral{
-        background-color: teal;
-        border-radius: 15px;
-        width:205px;
-        height:225px;
-        cursor: pointer;
-        position: relative;
-        right:400px;
-        top:200px;
-        color:black;
-        text-align: center;
-        font-size: larger;
-      }
+  </style>
+</head>
+<body>
 
-    </style>
-  </head>
-  <body>
-    <div id="main-screen">
-      <div id="title">
-        <nav>
-          <h2>135 in 2026</h2>
-        </nav>
-      </div>
-      <button id="Objective">OBJECTIVE</button>
-      <button id="Subjective">SUBJECTIVE</button>
-      <button id="play-off">PLAY OFF</button>
+  <div id="main-screen">
+    <h1>135 in 2026</h1>
+    <button id="Objective">OBJECTIVE</button>
+    <button id="Subjective">SUBJECTIVE</button>
+    <button id="play-off">PLAY OFF</button>
+  </div>
+
+  <div id="sub" class="screen" style="background-color: #ffeb3b;">
+    <button class="back-btn">Go Back</button>
+  </div>
+
+  <div id="obj" class="screen" style="background-color: #b3e5fc;">
+    <button class="back-btn">Go Back</button>
+    <img src="https://via.placeholder.com/600x400?text=Objective+Scouting+Image" alt="Objective Scouting" style="max-width: 90%;">
+  </div>
+
+  <div id="play" class="screen" style="background-color: #a5d6a7;">
+    <button class="back-btn">Go Back</button>
+    <div class="coral-buttons">
+      <button id="algae">Algae</button>
+      <button id="l1Coral">L1 Coral</button>
+      <button id="l2Coral">L2 Coral</button>
+      <button id="l3Coral">L3 Coral</button>
+      <button id = "l4Coral">L4 Coral</button>
+      <button id = "NetScore">Net Score</button>
     </div>
+  </div>
 
-    <div id="sub">
-      <button id="back-btn1">Go Back</button>
-      <div id = "blueAlliance">
-      </div>
-    </div>
-
-    <div id="obj">
-      <button id="back-btn2">Go Back</button>
-      <img src = "file:///C:/Users/abennett747/Downloads/FRC%20Rebuilt%20Scouting%20App%20Background%20Subjective%20or%20Objective%20Blue.png">
-    </div>
-
-    <div id="play">
-      <button id="back-btn3">Go Back</button>
-        <button id = "algae">Algae: </button>
-        <button id = "l1Coral">l1 Coral: </button>
-        <button id = "l2Coral">l2 Coral: </button>
-    </div>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('Subjective').addEventListener('click', function() {
           document.getElementById('main-screen').style.display = 'none'; 
           document.getElementById('sub').style.display = 'block';
@@ -223,21 +151,18 @@
           document.getElementById('play').style.display = 'block';
         });
 
-        document.getElementById('back-btn1').addEventListener('click', function() {
-          document.getElementById('sub').style.display = 'none';
-          document.getElementById('main-screen').style.display = 'flex'; 
-        });
-
-        document.getElementById('back-btn2').addEventListener('click', function() {
-          document.getElementById('obj').style.display = 'none'; 
-          document.getElementById('main-screen').style.display = 'flex'; 
-        });
-
-        document.getElementById('back-btn3').addEventListener('click', function() {
-          document.getElementById('play').style.display = 'none'; 
-          document.getElementById('main-screen').style.display = 'flex'; 
+        // Back button functionality
+        const backButtons = document.querySelectorAll('.back-btn');
+        backButtons.forEach(button => {
+          button.addEventListener('click', function() {
+            document.getElementById('sub').style.display = 'none';
+            document.getElementById('obj').style.display = 'none';
+            document.getElementById('play').style.display = 'none';
+            document.getElementById('main-screen').style.display = 'flex';
+          });
         });
       });
-    </script>
-  </body>
+  </script>
+</body>
 </html>
+
