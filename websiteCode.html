@@ -10,63 +10,77 @@
       font-family: 'Poppins', sans-serif;
       background-color: #111;
       color: #fff;
+      letter-spacing: 0.5px;
+      line-height: 1.5;
     }
 
     #main-screen {
-        display: flex;
-        flex-direction: column;
-        background-color: yellow;
-        border-radius: 15px;
-        text-align: center;
-        position: relative;
-        width: 70%;
-        height: 100vh;
-        color: black;
-        justify-content: center;
-        align-items: center;
-        margin-left: auto;
-        margin-right: auto;
-        background-image: url('file:///C:/Users/abennett747/Downloads/FRC%20Rebuilt%20Scouting%20App%20Background.png');
-        background-size: cover;
-        background-position: center;
-        gap: 10vh;
+      display: flex;
+      flex-direction: column;
+      background-color: #1e1e1e;
+      border-radius: 15px;
+      text-align: center;
+      position: relative;
+      width: 80%;
+      height: 100vh;
+      color: white;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      background-image: url('file:///C:/Users/abennett747/Downloads/FRC%20Rebuilt%20Scouting%20App%20Background.png');
+      background-size: cover;
+      background-position: center;
+      gap: 5vh;
+      padding: 20px;
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
       font-weight: 600;
-      margin-top: 0;
+      margin: 0;
       color: black;
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 10px 20px;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 15px 25px;
       border-radius: 10px;
     }
 
     button {
       padding: 15px 30px;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       border: none;
-      border-radius: 10px;
-      background-color: #222;
+      border-radius: 12px;
+      background-color: #2a2a2a;
       color: white;
       cursor: pointer;
-      width: 70%;
-      max-width: 400px;
-      transition: all 0.3s ease;
+      width: 80%;
+      max-width: 300px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      outline-offset: 4px;
+      transition: 0.2s ease;
     }
 
     button:hover {
       background-color: #444;
-      transform: translateY(-3px);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 10px rgba(0,0,0,0.3);
     }
+
+    button:active .front {
+    transform: translateY(-2px);
+  }
+
+  .pushable {
+  outline-offset: 4px;
+}
 
     .screen {
       display: none;
-      height: 190vh;
-      padding: 30px;
-      background-size: cover;
-      background-position: center;
-      box-sizing: border-box;
+      min-height: 100vh;
+      padding: 30px 20px;
+      background-color: #1a1a1a;
+      color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
     }
 
     .active {
@@ -76,6 +90,7 @@
     }
 
     .back-btn {
+      align-self: flex-start;
       margin-bottom: 20px;
       background-color: crimson;
     }
@@ -90,8 +105,9 @@
 
     .coral-buttons button {
       width: 200px;
-      height: 200px;
-      font-size: 1rem;
+      height: 150px;
+      font-size: 1.1rem;
+      font-weight: bold;
       color: black;
     }
 
@@ -99,9 +115,61 @@
     #l1Coral { background-color: white; }
     #l2Coral { background-color: teal; }
     #l3Coral { background-color: orange; }
-    #l4Coral{background-color: pink;}
-    #NetScore{background-color:gray;}
+    #l4Coral { background-color: pink; }
+    #NetScore { background-color: gray; }
 
+    #table {
+      display: flex;
+      flex-direction: column;
+      background-color: beige;
+      border-radius: 15px;
+      text-align: center;
+      width: 100%;
+      height: 90vh;
+      color: black;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      gap: 10vh;
+    }
+
+    #table2 {
+      background-color: black;
+      width: 50px;
+      height: 20px;
+      border-radius: 20px;
+      position: relative;
+      top: 100px;
+    }
+
+    img {
+      max-width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    @media (max-width: 768px) {
+      #main-screen, .screen {
+        width: 95%;
+        height: auto;
+        padding: 20px;
+      }
+
+      button {
+        width: 90%;
+      }
+
+      .coral-buttons button {
+        width: 45%;
+        height: auto;
+        padding: 15px;
+        font-size: 1rem;
+      }
+
+      .back-btn {
+        margin-bottom: 15px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -113,69 +181,69 @@
     <button id="play-off">PLAY OFF</button>
   </div>
 
-  <div id="sub" class="screen" style="background-color: #ffeb3b;">
+  <div id="sub" class="screen">
     <button class="back-btn">Go Back</button>
+    <div id="table"></div>
   </div>
 
-  <div id="obj" class="screen" style="background-color: #b3e5fc;">
+  <div id="obj" class="screen">
     <button class="back-btn">Go Back</button>
-    <img src="https://via.placeholder.com/600x400?text=Objective+Scouting+Image" alt="Objective Scouting" style="max-width: 90%;">
+    <img src="FRC Rebuilt Scouting App Background Subjective Blue.jpg" alt="Objective Scouting">
   </div>
 
-  <div id="play" class="screen" style="background-color: #a5d6a7;">
+  <div id="play" class="screen">
     <button class="back-btn">Go Back</button>
     <div class="coral-buttons">
       <button id="algae">Algae</button>
       <button id="l1Coral">L1 Coral</button>
       <button id="l2Coral">L2 Coral</button>
       <button id="l3Coral">L3 Coral</button>
-      <button id = "l4Coral">L4 Coral</button>
-      <button id = "NetScore">Net Score</button>
+      <button id="l4Coral">L4 Coral</button>
+      <button id="NetScore">Net Score</button>
     </div>
   </div>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('Subjective').addEventListener('click', function() {
-      document.getElementById('main-screen').style.display = 'none'; 
-      document.getElementById('sub').style.display = 'block';
-    });
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('Subjective').addEventListener('click', function () {
+        document.getElementById('main-screen').style.display = 'none';
+        document.getElementById('sub').style.display = 'flex';
+      });
 
-    document.getElementById('Objective').addEventListener('click', function() {
-      document.getElementById('main-screen').style.display = 'none'; 
-      document.getElementById('obj').style.display = 'block';
-    });
+      document.getElementById('Objective').addEventListener('click', function () {
+        document.getElementById('main-screen').style.display = 'none';
+        document.getElementById('obj').style.display = 'flex';
+      });
 
-    document.getElementById('play-off').addEventListener('click', function() {
-      document.getElementById('main-screen').style.display = 'none'; 
-      document.getElementById('play').style.display = 'block';
-    });
+      document.getElementById('play-off').addEventListener('click', function () {
+        document.getElementById('main-screen').style.display = 'none';
+        document.getElementById('play').style.display = 'flex';
+      });
 
-    // Back button functionality
-    const backButtons = document.querySelectorAll('.back-btn');
-    backButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        document.getElementById('sub').style.display = 'none';
-        document.getElementById('obj').style.display = 'none';
-        document.getElementById('play').style.display = 'none';
-        document.getElementById('main-screen').style.display = 'flex';
+      // Back button functionality
+      const backButtons = document.querySelectorAll('.back-btn');
+      backButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          document.getElementById('sub').style.display = 'none';
+          document.getElementById('obj').style.display = 'none';
+          document.getElementById('play').style.display = 'none';
+          document.getElementById('main-screen').style.display = 'flex';
+        });
+      });
+
+      // Add count functionality to coral buttons
+      const coralButtons = document.querySelectorAll('.coral-buttons button');
+      coralButtons.forEach(button => {
+        button.dataset.count = 0;
+        const originalText = button.textContent;
+
+        button.addEventListener('click', function () {
+          let count = parseInt(button.dataset.count) + 1;
+          button.dataset.count = count;
+          button.textContent = `${originalText.split(':')[0]}: ${count}`;
+        });
       });
     });
-
-    // Add count functionality to coral buttons
-    const coralButtons = document.querySelectorAll('.coral-buttons button');
-    coralButtons.forEach(button => {
-      button.dataset.count = 0;
-      const originalText = button.textContent;
-      
-      button.addEventListener('click', function() {
-        let count = parseInt(button.dataset.count) + 1;
-        button.dataset.count = count;
-        button.textContent = `${originalText}: ${count}`;
-      });
-    });
-});
-
   </script>
 </body>
 </html>
