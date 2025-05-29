@@ -123,19 +123,16 @@
     #table {
       display: flex;
       flex-direction: column;
-      background-color: #006400; 
+      background-color: beige;
       border-radius: 15px;
       text-align: center;
       width: 100%;
-      max-width: 1000px;
-      color: white;
-      justify-content: flex-start;
+      height: 90vh;
+      color: black;
+      justify-content: center;
       align-items: center;
       margin: auto;
-      gap: 40px;
-      padding: 40px;
-      position: relative; 
-      min-height: 500px;
+      gap: 10vh;
     }
 
     #continue {
@@ -156,6 +153,9 @@
       justify-content: center;
       color: white;
       font-size: 1.2rem;
+      position: relative;
+      right:730px;
+      bottom:410px;
     }
 
     img {
@@ -186,6 +186,14 @@
         margin-bottom: 15px;
       }
     }
+
+
+    #blueAlliance{
+      position: relative;
+      left:100px;
+      bottom:150px;  
+    }
+
   </style>
 </head>
 <body>
@@ -200,14 +208,17 @@
   <div id="sub" class="screen">
     <button class="back-btn">Go Back</button>
     <div id="table">
-      <div id="allianceSelector">Alliance Selector</div>
+      <div id="allianceSelector"></div>
       <button id="continue">Continue</button>
     </div>
   </div>
 
   <div id="obj" class="screen">
     <button class="back-btn">Go Back</button>
-    <img src="FRC Rebuilt Scouting App Background Subjective Blue.jpg" alt="Objective Scouting">
+    <img src="https://github.com/791747hnlhymt/scoutingApp2026Prototype/blob/main/Screenshot%202025-05-29%20140306.png?raw=true">
+    <div id = "blueAlliance">
+      <img src = "https://github.com/791747hnlhymt/scoutingApp2026Prototype/blob/main/Screenshot%202025-05-29%20140001.png?raw=true">
+    </div> 
   </div>
 
   <div id="play" class="screen">
