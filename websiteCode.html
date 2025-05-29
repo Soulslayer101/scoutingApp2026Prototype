@@ -27,7 +27,7 @@
       justify-content: center;
       align-items: center;
       margin: auto;
-      background-image: url('https://github.com/791747hnlhymt/scoutingApp2026Prototype/blob/main/FRC%20Rebuilt%20Scouting%20App%20Background.jpg?raw=true');
+      background-image: url('https://github.com/791747hnlhymt/scoutingApp2026Prototype/blob/main/Screenshot%202025-05-29%20141707.png?raw=true');
       background-size: cover;
       background-position: center;
       gap: 5vh;
@@ -99,17 +99,15 @@
     #l4Coral { background-color: pink; }
     #NetScore { background-color: lightblue; }
     #Proccessor { background-color: red; }
-    
-
 
     #play {
-      background-color: gray;
       align-items: flex-start; 
       padding: 40px;
       margin: 0px;
       display: flex;
       flex-direction: column;
       gap: 20px;
+      background-image: url('https://github.com/791747hnlhymt/scoutingApp2026Prototype/blob/main/Screenshot%202025-05-29%20141707.png?raw=true');
     }
 
     #play .coral-buttons {
@@ -187,13 +185,22 @@
       }
     }
 
-
-    #blueAlliance{
+    #blueAlliance {
       position: relative;
-      left:100px;
-      bottom:150px;  
+      left: 100px;
+      bottom: 150px;  
     }
 
+    #resetCounts {
+      align-self: center;
+      background-color: darkred;
+      color: white;
+      font-weight: bold;
+      width: 200px;
+      height: 50px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -216,8 +223,8 @@
   <div id="obj" class="screen">
     <button class="back-btn">Go Back</button>
     <img src="https://github.com/791747hnlhymt/scoutingApp2026Prototype/blob/main/Screenshot%202025-05-29%20140306.png?raw=true">
-    <div id = "blueAlliance">
-      <img src = "https://github.com/791747hnlhymt/scoutingApp2026Prototype/blob/main/Screenshot%202025-05-29%20140001.png?raw=true">
+    <div id="blueAlliance">
+      <img src="https://github.com/791747hnlhymt/scoutingApp2026Prototype/blob/main/Screenshot%202025-05-29%20140001.png?raw=true">
     </div> 
   </div>
 
@@ -232,6 +239,7 @@
       <button id="NetScore">Net Score</button>
       <button id="Proccessor">Proccessor</button>
     </div>
+    <button id="resetCounts">Reset Counts</button>
   </div>
 
   <script>
@@ -270,6 +278,14 @@
           let count = parseInt(button.dataset.count) + 1;
           button.dataset.count = count;
           button.textContent = `${originalText.split(':')[0]}: ${count}`;
+        });
+      });
+
+      document.getElementById('resetCounts').addEventListener('click', function () {
+        coralButtons.forEach(button => {
+          button.dataset.count = 0;
+          const originalText = button.id.replace(/([A-Z])/g, ' $1').trim(); // CamelCase to label
+          button.textContent = originalText;
         });
       });
     });
