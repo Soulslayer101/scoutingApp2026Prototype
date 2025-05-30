@@ -1,49 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
-  <link rel = "stylesheet" href = "style.css">
-</head>
-<body>
+<div id="main-screen">
+  <h1>135 in 2026</h1>
+  <button id="Objective" type="button">OBJECTIVE</button>
+  <button id="Subjective" type="button">SUBJECTIVE</button>
+  <button id="play-off" type="button">PLAY OFF</button>
+</div>
 
-  <div id="main-screen">
-    <h1>135 in 2026</h1>
-    <button id="Objective">OBJECTIVE</button>
-    <button id="Subjective">SUBJECTIVE</button>
-    <button id="play-off">PLAY OFF</button>
+<div id="sub" class="screen">
+  <button class="back-btn" type="button">Go Back</button>
+  <div id="table">
+    <div id="allianceSelector"></div>
+    <button id="continue" type="button">Continue</button>
   </div>
+</div>
 
-  <div id="sub" class="screen">
-    <button class="back-btn">Go Back</button>
-    <div id="table">
-      <div id="allianceSelector"></div>
-      <button id="continue">Continue</button>
-    </div>
-  </div>
+<div id="obj" class="screen">
+  <button class="back-btn" type="button">Go Back</button>
+  <img src="https://github.com/791747hnlhymt/scoutingApp2026Prototype/blob/main/Screenshot%202025-05-29%20140306.png?raw=true">
+  <div id="blueAlliance">
+    <img src="https://github.com/791747hnlhymt/scoutingApp2026Prototype/blob/main/Screenshot%202025-05-29%20140001.png?raw=true">
+  </div> 
+</div>
 
-  <div id="obj" class="screen">
-    <button class="back-btn">Go Back</button>
-    <img src="https://github.com/791747hnlhymt/scoutingApp2026Prototype/blob/main/Screenshot%202025-05-29%20140306.png?raw=true">
-    <div id="blueAlliance">
-      <img src="https://github.com/791747hnlhymt/scoutingApp2026Prototype/blob/main/Screenshot%202025-05-29%20140001.png?raw=true">
-    </div> 
+<div id="play" class="screen">
+  <button class="back-btn" type="button">Go Back</button>
+  <div class="coral-buttons">
+    <button id="algae" type="button">Algae</button>
+    <button id="l1Coral" type="button">L1 Coral</button>
+    <button id="l2Coral" type="button">L2 Coral</button>
+    <button id="l3Coral" type="button">L3 Coral</button>
+    <button id="l4Coral" type="button">L4 Coral</button>
+    <button id="NetScore" type="button">Net Score</button>
+    <button id="Proccessor" type="button">Proccessor</button>
   </div>
-
-  <div id="play" class="screen">
-    <button class="back-btn">Go Back</button>
-    <div class="coral-buttons">
-      <button id="algae">Algae</button>
-      <button id="l1Coral">L1 Coral</button>
-      <button id="l2Coral">L2 Coral</button>
-      <button id="l3Coral">L3 Coral</button>
-      <button id="l4Coral">L4 Coral</button>
-      <button id="NetScore">Net Score</button>
-      <button id="Proccessor">Proccessor</button>
-    </div>
-    <button id="resetCounts">Reset Counts</button>
-  </div>
-    <script src="site.js"></script>
-</body>
-</html>
+  <button id="resetCounts" type="button">Reset Counts</button>
+</div>
