@@ -51,7 +51,9 @@ Scouting is critical in FRC competitions. This app simplifies the process by giv
 
 ## 📷 Preview
 
-![App Screenshot](https://raw.githubusercontent.com/791747hnlhymt/scoutingApp2026Prototype/main/Screenshot%202025-05-29%20141707.png)
+![App Screenshot](https://github.com/791747hnlhymt/scoutingApp2026Prototype/blob/main/Screenshot%202025-06-02%20144728.png?raw=true)
+
+
 
 ---
 
