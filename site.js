@@ -1,45 +1,47 @@
 document.addEventListener('DOMContentLoaded', function () {
-      document.getElementById('Subjective').addEventListener('click', function () {
-        document.getElementById('main-screen').style.display = 'none';
-        document.getElementById('sub').style.display = 'flex';
-      });
-
-      document.getElementById('Objective').addEventListener('click', function () {
-        document.getElementById('main-screen').style.display = 'none';
-        document.getElementById('obj').style.display = 'flex';
-      });
-
-      document.getElementById('play-off').addEventListener('click', function () {
-        document.getElementById('main-screen').style.display = 'none';
-        document.getElementById('play').style.display = 'flex';
-      });
-
-      const backButtons = document.querySelectorAll('.back-btn');
-      backButtons.forEach(button => {
-        button.addEventListener('click', function () {
-          document.getElementById('sub').style.display = 'none';
-          document.getElementById('obj').style.display = 'none';
-          document.getElementById('play').style.display = 'none';
-          document.getElementById('main-screen').style.display = 'flex';
-        });
-      });
-
-      const coralButtons = document.querySelectorAll('.coral-buttons button');
-      coralButtons.forEach(button => {
-        button.dataset.count = 0;
-        button.dataset.originalText = button.textContent;
-
-        button.addEventListener('click', function () {
-          let count = parseInt(button.dataset.count) + 1;
-          button.dataset.count = count;
-          button.textContent = `${button.dataset.originalText}: ${count}`;
-        });
-      });
-
-      document.getElementById('resetCounts').addEventListener('click', function () {
-        coralButtons.forEach(button => {
-          button.dataset.count = 0;
-          button.textContent = button.dataset.originalText;
-        });
+    const screens = {
+      main: document.getElementById('main-screen'),
+      sub: document.getElementById('sub'),
+      obj: document.getElementById('obj'),
+      play: document.getElementById('play')
+    };
+  
+    function showScreen(screenName) {
+      // Hide all screens
+      Object.values(screens).forEach(screen => screen.style.display = 'none');
+      // Show requested screen
+      screens[screenName].style.display = 'flex';
+    }
+  
+    // Navigation buttons
+    document.getElementById('Subjective').addEventListener('click', () => showScreen('sub'));
+    document.getElementById('Objective').addEventListener('click', () => showScreen('obj'));
+    document.getElementById('play-off').addEventListener('click', () => showScreen('play'));
+  
+    // Back buttons return to main
+    document.querySelectorAll('.back-btn').forEach(button => {
+      button.addEventListener('click', () => showScreen('main'));
+    });
+  
+    // Coral buttons logic
+    const coralButtons = document.querySelectorAll('.coral-buttons button');
+    coralButtons.forEach(button => {
+      button.dataset.count = 0;
+      button.dataset.originalText = button.textContent;
+  
+      button.addEventListener('click', () => {
+        let count = parseInt(button.dataset.count) + 1;
+        button.dataset.count = count;
+        button.textContent = `${button.dataset.originalText}: ${count}`;
       });
     });
+  
+    // Reset counts
+    document.getElementById('resetCounts').addEventListener('click', () => {
+      coralButtons.forEach(button => {
+        button.dataset.count = 0;
+        button.textContent = button.dataset.originalText;
+      });
+    });
+  });
+  
