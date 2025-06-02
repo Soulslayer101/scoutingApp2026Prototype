@@ -1,5 +1,75 @@
-# scoutingApp2026Prototype
-this will be the prototype of the scouting app for 2026 season of FRC
-For some reason my admin isint allowing me to acsess android studio so the next best option is vs code 
-for now im going to prototype with web dev beacuse it is simpler to prototype and gives me a good idea on how to design the app really well
-the purpose of this repository is to get our concept of a desighn we want and to execute it later once the prototype is done 
+# 🤖 FRC Scouting App (Web Prototype)
+
+This is a **web-based scouting app prototype** built to help FRC teams collect, track, and analyze data from robotics matches. The app allows you to input team performance data (both subjective and objective), and after logging all the robot actions, it will calculate and display **averages** to help with alliance selection and match strategy.
+
+---
+
+## 🌐 Live Website
+
+[🔗 Click here to use the Scouting App](https://791747hnlhymt.github.io/scoutingApp2026Prototype/)  
+*(Replace with your real URL if different)*
+
+---
+
+## 🎯 Features
+
+- 📱 Mobile-friendly layout with responsive design
+- 🧠 Three data modes:
+  - **Subjective** – for team impressions and observations
+  - **Objective** – for counting robot actions (like scoring)
+  - **Playoff** – advanced match tracking
+- 🔄 Reset button to clear data between matches
+- 📊 Automatic average calculation (in progress)
+- 🎨 Clean, themed UI with custom background images
+
+---
+
+## 🛠 Tech Stack
+
+- **HTML**
+- **CSS 
+- **JavaScript
+- **Python
+
+---
+
+## 📌 To-Do / Upcoming
+
+- ➕ Add match data summary view
+- 📈 Show real-time averages
+- 🧾 Export data (CSV, PDF)
+- 🧩 Integrate with cloud storage or database
+- 📋 Add team number / match input form
+
+---
+
+## 🧠 Why Use This?
+
+Scouting is critical in FRC competitions. This app simplifies the process by giving scouts a fast, clean interface and helping strategists make data-driven decisions based on robot performance.
+
+---
+
+## 📷 Preview
+
+![App Screenshot](https://raw.githubusercontent.com/791747hnlhymt/scoutingApp2026Prototype/main/Screenshot%202025-05-29%20141707.png)
+
+---
+
+## 🧪 How to Use
+
+1. Open the website.
+2. Choose a mode: **Subjective**, **Objective**, or **Playoff**.
+3. Tap buttons to track actions.
+4. Click **Reset** to start fresh between matches.
+5. Review stats and averages (coming soon!).
+
+---
+
+## 👨‍💻 Created By
+
+[Aiden Bennett  Team 135]  
+Prototype created for the 2026 FRC Season
+
+---
+
+This project is still in development. Feedback, issues, or feature requests are welcome!
