@@ -6,8 +6,8 @@ This is a **web-based scouting app prototype** built to help FRC teams collect, 
 
 ## 🌐 Live Website
 
-[🔗 Click here to use the Scouting App](https://github.com/791747hnlhymt/scoutingApp2026Prototype)  
-*(Replace with your real URL if different)*
+[🔗 Click here to use the Scouting Website](https://github.com/791747hnlhymt/scoutingApp2026Prototype)  
+
 
 ---
 
@@ -27,9 +27,9 @@ This is a **web-based scouting app prototype** built to help FRC teams collect, 
 ## 🛠 Tech Stack
 
 - **HTML**
-- **CSS 
-- **JavaScript
-- **Python
+- **CSS**
+- **JavaScript**
+- **Python**
 
 ---
 
