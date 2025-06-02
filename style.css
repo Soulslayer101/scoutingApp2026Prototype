@@ -37,6 +37,14 @@ h1 {
     border-radius: 20px;
 }
 
+h1:hover{
+    background-color: #444;
+    color:white;
+    transition: 0.2s ease;
+    transform: translateY(-2px);
+    
+}
+
 button {
     padding: 15px 30px;
     font-size: 1.1rem;
