@@ -45,3 +45,48 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
   
+  // Subjective submit logic
+document.getElementById('submitSubjective').addEventListener('click', () => {
+  const teamNumber = document.getElementById('teamNumber').value;
+  const strategyNotes = document.getElementById('strategyNotes').value;
+  const driverSkill = document.getElementById('driverSkill').value;
+  const communication = document.getElementById('communication').value;
+  const reliability = document.getElementById('reliability').value;
+
+  const selectedAlliance = document.getElementById('redAlliance').classList.contains('selected') ? 'Red' :
+                           document.getElementById('blueAlliance').classList.contains('selected') ? 'Blue' :
+                           'None';
+
+  if (!teamNumber) {
+    alert("Please enter a team number.");
+    return;
+  }
+
+  const data = {
+    teamNumber,
+    selectedAlliance,
+    strategyNotes,
+    driverSkill,
+    communication,
+    reliability
+  };
+
+  console.log("Subjective Data Submitted:", data);
+  alert("Subjective data saved!");
+});
+
+// Alliance button logic
+function clearAllianceSelection() {
+  document.getElementById('redAlliance').classList.remove('selected');
+  document.getElementById('blueAlliance').classList.remove('selected');
+}
+
+document.getElementById('redAlliance').addEventListener('click', () => {
+  clearAllianceSelection();
+  document.getElementById('redAlliance').classList.add('selected');
+});
+
+document.getElementById('blueAlliance').addEventListener('click', () => {
+  clearAllianceSelection();
+  document.getElementById('blueAlliance').classList.add('selected');
+});
