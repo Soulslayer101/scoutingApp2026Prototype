@@ -18,11 +18,45 @@
 
 <div id="sub" class="screen">
   <button class="back-btn" type="button">Go Back</button>
-  <div id="table">
-    <div id="allianceSelector">
-      <button id = "redAlliance">Red Alliance</button>
-      <button id = "blueAlliance">Blue Alliance</button>
+  <div id="subjective-form">
+    <h2>Subjective Scouting</h2>
+
+    <div class="form-section">
+      <label for="teamNumber">Team Number:</label>
+      <input type="number" id="teamNumber" placeholder="Enter team number" required>
     </div>
+
+    <div class="form-section alliance-buttons">
+      <label>Alliance:</label>
+      <div class="alliance-choice">
+        <button id="redAlliance" type="button">Red</button>
+        <button id="blueAlliance" type="button">Blue</button>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <label for="strategyNotes">Strategy Notes:</label>
+      <textarea id="strategyNotes" rows="4" placeholder="Describe their strategy..."></textarea>
+    </div>
+
+    <div class="form-section">
+      <label for="driverSkill">Driver Skill (1-5):</label>
+      <input type="range" min="1" max="5" id="driverSkill">
+    </div>
+
+    <div class="form-section">
+      <label for="communication">Communication (1-5):</label>
+      <input type="range" min="1" max="5" id="communication">
+    </div>
+
+    <div class="form-section">
+      <label for="reliability">Robot Reliability (1-5):</label>
+      <input type="range" min="1" max="5" id="reliability">
+    </div>
+
+    <button id="submitSubjective" type="button">Submit</button>
+  </div>
+</div>
    
     <button id="continue" type="button">Continue</button>
   </div>
