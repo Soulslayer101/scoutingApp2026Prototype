@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('Subjective').addEventListener('click', () => showScreen('sub'));
     document.getElementById('Objective').addEventListener('click', () => showScreen('obj'));
     document.getElementById('play-off').addEventListener('click', () => showScreen('play'));
-  
+    document.getElementById('robotData').addEventListener('click' , ()=> showScreen('dataScreen'));
     // Back buttons return to main
     document.querySelectorAll('.back-btn').forEach(button => {
       button.addEventListener('click', () => showScreen('main'));
@@ -89,4 +89,4 @@ document.getElementById('redAlliance').addEventListener('click', () => {
 document.getElementById('blueAlliance').addEventListener('click', () => {
   clearAllianceSelection();
   document.getElementById('blueAlliance').classList.add('selected');
-});
+})
