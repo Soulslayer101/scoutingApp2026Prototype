@@ -204,9 +204,8 @@ button:hover {
 }
 
 #blueAlliance {
-    position: absolute;
-    bottom: 150px;
-    left: 100px;
+    position: relative;
+    left: 80px;
 }
 
 #resetCounts {
@@ -266,15 +265,16 @@ button:hover {
  }
   
  #dataScreen{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 60px 20px;
-    gap: 40px;
-    background-image: url('https://raw.githubusercontent.com/791747hnlhymt/scoutingApp2026Prototype/main/Screenshot%202025-05-29%20141707.png');
-    background-size: cover;
-    background-position: center;
+    max-width: 600px;
+    width: 100%;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    background: #FFF8DC;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    color: #5C4033;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
   }
 
 
