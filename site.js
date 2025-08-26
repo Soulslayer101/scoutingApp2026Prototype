@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
   
+  
   // Subjective submit logic
 document.getElementById('submitSubjective').addEventListener('click', () => {
   const teamNumber = document.getElementById('teamNumber').value;
@@ -59,6 +60,9 @@ document.getElementById('submitSubjective').addEventListener('click', () => {
 
   if (!teamNumber) {
     alert("Please enter a team number.");
+    return;
+  }else if(!strategyNotes){
+    alert("Please enter the teams stratigy.");
     return;
   }
 
