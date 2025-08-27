@@ -3,7 +3,11 @@ document.addEventListener('DOMContentLoaded', function () {
       main: document.getElementById('main-screen'),
       sub: document.getElementById('sub'),
       obj: document.getElementById('obj'),
-      play: document.getElementById('play')
+      play: document.getElementById('play'),
+      qrscreen: document.getElementById('qrscreen')
+      
+     
+      
     };
   
     function showScreen(screenName) {
@@ -18,6 +22,8 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('Objective').addEventListener('click', () => showScreen('obj'));
     document.getElementById('play-off').addEventListener('click', () => showScreen('play'));
     document.getElementById('robotData').addEventListener('click' , ()=> showScreen('dataScreen'));
+    document.getElementById('continue').addEventListener('click' , ()=> showScreen('qrscreen'));
+
     // Back buttons return to main
     document.querySelectorAll('.back-btn').forEach(button => {
       button.addEventListener('click', () => showScreen('main'));
@@ -65,6 +71,7 @@ document.getElementById('submitSubjective').addEventListener('click', () => {
     alert("Please enter the teams stratigy.");
     return;
   }
+
 
   const data = {
     teamNumber,
