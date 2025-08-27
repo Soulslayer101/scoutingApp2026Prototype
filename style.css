@@ -1,5 +1,8 @@
 html, body {
     margin: 0;
+    padding:0
+    width:100%;
+    height:100%;
     font-family: 'Poppins', sans-serif;
     background-color: #111;
     color: #fff;
@@ -26,13 +29,14 @@ html, body {
     inset: 0;
     border-radius: 15px;
     z-index: 10;
+    
 }
 
 .foil-card {
-    position: relative;
+    position: fixed;
     background: linear-gradient(135deg, #d4af37, #ffd700);
     background-color: #d4af37;
-    background-size: 200% 200%;
+    background-size: 400% 400%;
     background-attachment: fixed;
     animation: foilFlow 10s linear infinite;
     width: 100vw;
@@ -41,7 +45,7 @@ html, body {
     padding: 30px;
     color: black;
     text-align: center;
-    z-index: 3;
+    z-index: -1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,7 +134,7 @@ button:hover {
     background-color: crimson;
 }
 
-#play {
+#play{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -158,6 +162,12 @@ button:hover {
     color: black;
 }
 
+#qrscreen{
+    background-color:black;
+    width:200px;
+    height:200px;
+}
+
 #algae { background-color: lightgreen; }
 #l1Coral { background-color: white; }
 #l2Coral { background-color: teal; }
@@ -165,6 +175,7 @@ button:hover {
 #l4Coral { background-color: pink; }
 #NetScore { background-color: lightblue; }
 #Proccessor { background-color: red; }
+#continue{background-color:green; width:150px; height:60px;}
 
 #table {
     display: flex;
@@ -385,4 +396,20 @@ textarea {
 .selected {
   border: 4px solid white !important;
   transform: scale(1.05);
+}
+
+.chart-container {
+  display: flex; /* or grid */
+  align-items: flex-end; /* for vertical bars */
+  height: 200px; /* set a height for the chart area */
+  border: 1px solid #ccc;
+}
+
+.bar {
+  flex-grow: 1; /* or use grid-column */
+  background-color: steelblue;
+  margin: 0 5px;
+  text-align: center;
+  color: white;
+  padding-top: 5px;
 }
