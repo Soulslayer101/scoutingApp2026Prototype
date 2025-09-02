@@ -3,11 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
       main: document.getElementById('main-screen'),
       sub: document.getElementById('sub'),
       obj: document.getElementById('obj'),
-      play: document.getElementById('play'),
-      qrscreen: document.getElementById('qrscreen')
-      
-     
-      
+      play: document.getElementById('play')
     };
   
     function showScreen(screenName) {
@@ -22,8 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('Objective').addEventListener('click', () => showScreen('obj'));
     document.getElementById('play-off').addEventListener('click', () => showScreen('play'));
     document.getElementById('robotData').addEventListener('click' , ()=> showScreen('dataScreen'));
-    document.getElementById('continue').addEventListener('click' , ()=> showScreen('qrscreen'));
-
     // Back buttons return to main
     document.querySelectorAll('.back-btn').forEach(button => {
       button.addEventListener('click', () => showScreen('main'));
@@ -72,7 +66,6 @@ document.getElementById('submitSubjective').addEventListener('click', () => {
     return;
   }
 
-
   const data = {
     teamNumber,
     selectedAlliance,
@@ -84,6 +77,9 @@ document.getElementById('submitSubjective').addEventListener('click', () => {
 
   console.log("Subjective Data Submitted:", data);
   alert("Subjective data saved!");
+
+
+  document.getElementById('outputData').innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
 });
 
 // Alliance button logic
