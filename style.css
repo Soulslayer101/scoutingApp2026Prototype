@@ -112,7 +112,7 @@ button:hover {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
-.screen {
+#sub {
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -121,7 +121,29 @@ button:hover {
     inset: 0;
     min-height: 100dvh;
     padding: 30px 20px;
+    background-image: url('https://raw.githubusercontent.com/Soulslayer101/scoutingApp2026Prototype/main/FRC%20Rebuilt%20Scouting%20App%20Background%20Subjective%20Default.png');
     background-color: #1a1a1a;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: 15px;
+    z-index: 9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#obj {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+    min-height: 100dvh;
+    padding: 30px 20px;
+    background-image: url('https://raw.githubusercontent.com/Soulslayer101/scoutingApp2026Prototype/main/FRC%20Rebuilt%20Scouting%20App%20Background%20Objective%20Default.png');
+    background-color: #1a1a1a;
+    background-size: cover;
+    background-position: center;
     color: white;
     border-radius: 15px;
     z-index: 9;
