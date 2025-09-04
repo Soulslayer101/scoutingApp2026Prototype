@@ -38,7 +38,7 @@ html, body {
     background-color: #d4af37;
     background-size: 400% 400%;
     background-attachment: fixed;
-    animation: foilFlow 10s linear infinite;
+    animation: foilFlow 10s ease-in-out infinite;
     width: 100vw;
     height: 100dvh;
     margin: 0;
